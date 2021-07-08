@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ChallengeTwo_ClaimsConsole2/1.0.0": {
+        "dependencies": {
+          "ChallengeTwo_ClaimsRepository": "1.0.0"
+        },
+        "runtime": {
+          "ChallengeTwo_ClaimsConsole2.dll": {}
+        }
+      },
+      "ChallengeTwo_ClaimsRepository/1.0.0": {
+        "runtime": {
+          "ChallengeTwo_ClaimsRepository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ChallengeTwo_ClaimsConsole2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChallengeTwo_ClaimsRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

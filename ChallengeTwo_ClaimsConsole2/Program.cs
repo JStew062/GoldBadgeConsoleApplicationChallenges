@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace ChallengeTwo_ClaimsConsole
+namespace ChallengeTwo_ClaimsConsole2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //User Interface
-            ProgramUI1 ui = new ProgramUI1();
+            // User Interface
+             ProgramUI ui = new ProgramUI();
             ui.Run();
         }
     }

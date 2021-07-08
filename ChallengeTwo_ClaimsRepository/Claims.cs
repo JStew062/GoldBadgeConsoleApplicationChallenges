@@ -22,7 +22,7 @@ namespace ChallengeTwo_ClaimsRepository
 
         public int ClaimID { get; set; }
 
-        public ClaimType TypeOfClaim { get; set; }
+        public string TypeOfClaim { get; set; }
 
         public string ClaimDesc { get; set; }
 
@@ -48,7 +48,7 @@ namespace ChallengeTwo_ClaimsRepository
         public Claims() { }
 
         //Constructor Full
-        public Claims(int claimid, ClaimType claimtype, string claimdesc, decimal claimamount, DateTime dateofincident, DateTime dateofclaim, bool isvalid)
+        public Claims(int claimid, string claimtype, string claimdesc, decimal claimamount, DateTime dateofincident, DateTime dateofclaim)
 
         {
             ClaimID = claimid;
@@ -57,7 +57,7 @@ namespace ChallengeTwo_ClaimsRepository
             ClaimAmount = claimamount;
             DateOfIncident = dateofincident;
             DateOfClaim = dateofclaim;
-            IsValid = isvalid;
+            //IsValid = isvalid;
         }
     }
 }

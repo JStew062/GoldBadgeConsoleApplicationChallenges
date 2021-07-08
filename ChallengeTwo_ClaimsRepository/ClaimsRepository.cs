@@ -8,21 +8,19 @@ namespace ChallengeTwo_ClaimsRepository
 {
     public class ClaimsRepository
     {
-        //FakeDatabase
-        protected readonly List<Claims> _claimsItemDirectory = new List<Claims>();
+        protected readonly Queue<Claims> _claimsItemDirectory = new Queue<Claims>();
 
-        //CRUD
         //Create
         public bool AddContentToDirectory(Claims newContent)
         {
             int startingCount = _claimsItemDirectory.Count;
-            _claimsItemDirectory.Add(newContent);
+            _claimsItemDirectory.Enqueue(newContent);
             bool wasAdded = (_claimsItemDirectory.Count > startingCount) ? true : false;
             return wasAdded;
         }
 
         //Read
-        public List<Claims> GetContents()
+        public Queue<Claims> GetContents()
         {
             return _claimsItemDirectory;
         }
@@ -45,25 +43,17 @@ namespace ChallengeTwo_ClaimsRepository
             if (oldContent != null)
             {
                 oldContent.ClaimID = newContent.ClaimID;
-                oldContent.ClaimType = newContent.ClaimType;
+                oldContent.TypeOfClaim = newContent.TypeOfClaim;
                 oldContent.ClaimDesc = newContent.ClaimDesc;
                 oldContent.ClaimAmount = newContent.ClaimAmount;
                 oldContent.DateOfIncident = newContent.DateOfIncident;
                 oldContent.DateOfClaim = newContent.DateOfClaim;
-                oldContent.IsValid = newContent.IsValid;
                 return true;
             }
             else
             {
                 return false;
             }
-        }
-
-        //Delete
-        public bool DeleteExistingContent(Claims existingContent)
-        {
-            bool deleteResult = _claimsItemDirectory.Remove(existingContent);
-            return deleteResult;
         }
     }
 }
